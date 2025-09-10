@@ -1,6 +1,6 @@
 #Assigning variables
-number1 = 20
-number2 = 10
+number1 = 10
+number2 = 5
 
 #performing operations
 sum = number1 + number2
