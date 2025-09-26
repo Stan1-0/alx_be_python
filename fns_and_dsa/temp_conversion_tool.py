@@ -24,4 +24,4 @@ elif metric == "F":
     conversion = convert_to_celsius(temperature)
     print(f"{temperature}°F is {conversion}°C")
 else:
-    print("Invalid input")
+    print("Invalid metric type")
