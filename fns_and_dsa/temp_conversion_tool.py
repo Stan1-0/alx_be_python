@@ -14,8 +14,21 @@ def convert_to_fahrenheit(celsius):
     fahrenheit = (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
     return fahrenheit
 
-temperature = int(input("Enter the temperature to convert: "))
+
+def get_valid_temperature():
+    while True:
+        try:
+            temperature = float(input("Enter the temperature to convert: "))
+            if temperature < -273.15:
+                print("Temperature cannot be below absolute zero (-273.15°C).")
+            else:
+                return temperature
+        except ValueError:
+            print("Invalid temperature. Please enter a numeric value.")
+
+temperature = get_valid_temperature()
 metric = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").upper()
+
 
 if metric == "C":
     conversion = convert_to_fahrenheit(temperature)
